@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/12R2h--E0zilXIeMNeRKeXUb9yxzxcMkb
 """
 
-!pip install streamlit
+pip install streamlit
 
 import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
