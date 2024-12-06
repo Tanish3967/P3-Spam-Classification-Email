@@ -28,7 +28,7 @@ and a target column "spam" which describe the state of an email spam or not.<br>
 ## ➲ Installation
 1. Clone the repo
    ```sh
-   gh repo clone Tanish3967/P3-Spam-Classification-Email
+   git clone https://github.com/Tanish3967/P3-Spam-Classification-Email.git
    ```
 2. Open 'span_detector.py' in Google Colab or VScode and enjoy
 3. Or Simply Use the Streamlit Application
