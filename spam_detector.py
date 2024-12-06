@@ -19,10 +19,14 @@ def train_model():
     # Upload the dataset
     uploaded_file = st.file_uploader("Upload your spam dataset (CSV format)", type=["csv"])
     if uploaded_file is not None:
-        # Load dataset
-        data = pd.read_csv(uploaded_file)
-        st.write("Dataset Preview:")
-        st.dataframe(data.head())
+        try:
+            # Try reading the dataset
+            data = pd.read_csv(uploaded_file, encoding='latin-1')
+            st.write("Dataset Preview:")
+            st.dataframe(data.head())
+        except UnicodeDecodeError:
+            st.error("Error reading file. Please ensure it is encoded in UTF-8 or Latin-1.")
+            return
 
         # Validate dataset
         if 'class' in data.columns and 'message' in data.columns:
@@ -57,6 +61,7 @@ def train_model():
             st.error("Dataset must contain 'class' and 'message' columns.")
     else:
         st.info("Please upload a dataset to begin training.")
+
 
 # Function to load model and vectorizer
 def load_model_and_vectorizer():
