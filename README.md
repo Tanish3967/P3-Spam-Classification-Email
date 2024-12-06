@@ -6,6 +6,10 @@
 ## <br>**➲ Project description**
 Email spam detection system is used to detect email spam using Machine Learning technique called Natural Language Processing and Python, where we have a dataset contain a lot of emails by extract important words and then use naive classifier we can detect if this email is spam or not.
 
+## <br>**➲ Features**
+- **Email Classification**: Enter an email and classify it as either Spam or Not Spam.
+- **User-Friendly Interface**: The result is displayed with a colored background to clearly indicate whether an email is Spam (red) or Not Spam (green).
+
 <!-- PREREQUISTIES -->
 ## <br>**➲ Prerequisites**
 This is list of required packages and modules for the project to be installed :
